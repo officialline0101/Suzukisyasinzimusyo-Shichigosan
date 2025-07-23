@@ -901,6 +901,9 @@
         <div class="label">電話番号<span class="required">必須</span></div>
         <input type="tel" id="phone" placeholder="電話番号を入力してください" oninput="saveInput('phone')">
 
+        <div class="label">ご住所<span class="required">必須</span></div>
+        <input type="text" id="Yourresidentialaddress" placeholder="ご住所を入力してください" oninput="saveInput('Yourresidentialaddress')">
+
         <div class="label">プランをお選びください<span class="required">必須</span></div>
         <div class="visit-buttons">
             <button type="button" id="firstVisit" onclick="selectVisit(this)">お参り同行プラン 47000円+税</button>
@@ -911,7 +914,7 @@
         </div>
 
             <div class="labelnigyou">祈祷されるお子様お名前、年齢、性別<br>(複数の場合は全員分)を<br>ご記入ください。<span class="required">必須</span></div>
-            <textarea id="mugwortmainkid" placeholder="例：山田太郎・3ヶ月・男の子など 複数いれば全員分ご記入ください。"></textarea>
+            <textarea id="mugwortmainkid" placeholder="例：山田太郎・3歳・男の子など 複数いれば全員分ご記入ください。"></textarea>
 
             <div class="labelnigyou">付き添いご兄弟の<br>お名前、年齢、性別を<br>ご記入ください（任意）</div>
             <textarea id="mugwortsiblinginfo" placeholder="お名前・年齢・性別をご記入ください。"></textarea>
@@ -946,24 +949,8 @@
                 <button type="button" onclick="selectkimono(this)">相談したい</button>
             </div>
 
-            <div class="labelnigyou">【着物レンタル希望の有無】の<br>"有り"を選ばれた方は<br>以下の内容をご記入ください。</div>
-            <div class="info-text">お子様の衣装のスクショ、安心パックの有無、靴のサイズ</div>
-            
-            <input type="text" id="info-textmemo" placeholder="ご記入ください">
-
-            <div class="info-text">大人の場合→靴のサイズ、衣装のスクショ、洋服のサイズ、安心パックの有無、年代、好きな雰囲気</div>
-            <input type="text" id="info-textmemo" placeholder="ご記入ください">
-
             <div class="label">お支度ご希望の有無<span class="required">必須</span></div>
-        <div class="info-text">※衣装レンタル、お支度ご希望の方には、<br>
-追って詳しいご案内をさせて頂きますので、<br>
-まずはご希望の有無のみお聞かせください。<br>
-検討中の方はその旨お伝えください。<br><br>
-
-※衣装、お支度の料金表はHPに<br>リンクがありますので、そちらをご覧ください。<br>
-交通費以外のお見積りにつきましては、<br>
-大変恐縮ですが料金表をご参照頂き、<br>
-お客様の方で計算をお願い致します。</div>
+        <div class="info-text">ヘアメイクさんのスケジュール確認が必要になりますので、<br>追って希望日の空き状況をお知らせします</div>
             <div class="hairmakeup-buttons">
                 <button type="button" onclick="selecthairmakeup(this)">有り</button>
                 <button type="button" onclick="selecthairmakeup(this)">無し</button>
@@ -1000,10 +987,22 @@
             <input type="datetime-local" id="date3" class="datetime-input" placeholder=" " aria-label="タップして日時を入力">
         </div>
 
-        <div class="labelContent">メッセージ<br>（質問等お気軽にご記入ください）</div>
+<div class="info-text">
+  ※衣装、お支度の料金表はHPにリンクがございます。<br>
+  大変恐縮ですが、交通費以外のお見積りにつきましては、<br>
+  各自料金表をご参照くださいますようお願い申し上げます。<br>
+  <a href="https://suzu-photo.com/wp-content/uploads/2025/04/%E6%96%99%E9%87%91%E8%A1%A82025.jpg" target="_blank" rel="noopener noreferrer">
+    ■お支度料金表
+  </a><br><br>
+  <a href="https://suzu-photo.com/wp-content/uploads/2025/04/%E4%B8%83%E4%BA%94%E4%B8%89%E3%83%BB%E7%94%A3%E7%9D%80%E3%83%BB%E8%A8%AA%E5%95%8F%E7%9D%80_%E6%96%99%E9%87%91%E8%A1%A8-scaled.jpg" target="_blank" rel="noopener noreferrer">
+    ■衣装レンタル料金表
+  </a>
+</div>
+
+        <div class="labelContent">ご質問/ご相談<br>（質問等お気軽にご記入ください）</div>
         <textarea id="message" rows="4" placeholder="メッセージを入力してください"></textarea>
 
-        <button class="submit-button" onclick="submitForm()" div id="section-message">予約を行う</button>
+        <button class="submit-button" onclick="submitForm()" div id="section-message">送信</button>
     </div>
 
     <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
@@ -1076,9 +1075,11 @@
         // ページが読み込まれたときに前回の入力内容を復元
         document.addEventListener('DOMContentLoaded', function () {
             const savedName = localStorage.getItem('name');
+            const savedYourresidentialaddress = localStorage.getItem('Yourresidentialaddress');
             const savedPhone = localStorage.getItem('phone');
 
             if (savedName) document.getElementById('name').value = savedName;
+            if (savedYourresidentialaddress) document.getElementById('Yourresidentialaddress').value = savedYourresidentialaddress;
             if (savedPhone) document.getElementById('phone').value = savedPhone;
         });
 
@@ -1552,6 +1553,7 @@ function selectpreparationphoto(element) {
         phone: document.getElementById('phone').value.trim(),
         mugwortmainkid: document.getElementById('mugwortmainkid').value.trim(),
         mugwortsiblinginfo: document.getElementById('mugwortsiblinginfo').value.trim(),
+        Yourresidentialaddress: document.getElementById('Yourresidentialaddress').value.trim(),
         mugwortparticipants: document.getElementById('mugwortparticipants').value.trim(),
         mugwortshrinename: document.getElementById('mugwortshrinename').value.trim(),
         mugwortreservationtime: document.getElementById('mugwortreservationtime').value.trim(),
@@ -1575,6 +1577,11 @@ function selectpreparationphoto(element) {
                 return;
             }
 
+            if (!formData.Yourresidentialaddress) {
+                alert('ご住所を入力してください');
+                return;
+            }
+
             if (!formData.dates[0]) {
                 alert('第1希望日※必須を選択してください。');
                 return;
@@ -1583,7 +1590,7 @@ function selectpreparationphoto(element) {
             // LINEトークにメッセージを送信
             liff.sendMessages([{
                 type: 'text',
-                text: `【予約フォーム】\n≪七五三≫\n\n｟お名前｠\n・${formData.name}\n\n｟電話番号｠\n・${formData.phone}\n\n｟プラン｠\n・${formData.visitCount}\n\n｟祈祷されるお子様｠\n・${formData.mugwortmainkid}\n\n｟付き添いご兄弟｠\n・${formData.mugwortsiblinginfo}\n\n｟撮影に参加される方｠\n・${formData.mugwortparticipants}\n\n｟同行撮影｠\n・${formData.mugwortshrinename}\n\n｟ご祈祷の予約時間｠\n・${formData.mugwortreservationtime}\n\n｟生花撮影｠\n・${formData.FreshflowerphotographyCount}\n\n｟お支度風景｠\n・${formData.preparationphotoCount}\n\n｟着物レンタル｠\n・${formData.kimonoCount}\n\n｟お支度ご希望｠\n・${formData.hairmakeupCount}\n\n【希望日時】：\n｟第一希望日｠\n${formatDate(formData.dates[0])}\n\n｟第二希望日｠\n${formatDate(formData.dates[1])}\n\n｟第三希望日｠\n${formatDate(formData.dates[2])}\n\n｟メッセージ｠${formData.message}`
+                text: `【予約フォーム】\n≪七五三≫\n\n｟お名前｠\n・${formData.name}\n\n｟ご住所｠\n・${formData.Yourresidentialaddress}\n\n｟電話番号｠\n・${formData.phone}\n\n｟プラン｠\n・${formData.visitCount}\n\n｟祈祷されるお子様｠\n・${formData.mugwortmainkid}\n\n｟付き添いご兄弟｠\n・${formData.mugwortsiblinginfo}\n\n｟撮影に参加される方｠\n・${formData.mugwortparticipants}\n\n｟同行撮影｠\n・${formData.mugwortshrinename}\n\n｟ご祈祷の予約時間｠\n・${formData.mugwortreservationtime}\n\n｟生花撮影｠\n・${formData.FreshflowerphotographyCount}\n\n｟お支度風景｠\n・${formData.preparationphotoCount}\n\n｟着物レンタル｠\n・${formData.kimonoCount}\n\n｟お支度ご希望｠\n・${formData.hairmakeupCount}\n\n【希望日時】：\n｟第一希望日｠\n${formatDate(formData.dates[0])}\n\n｟第二希望日｠\n${formatDate(formData.dates[1])}\n\n｟第三希望日｠\n${formatDate(formData.dates[2])}\n\n｟メッセージ｠${formData.message}`
             }]).then(() => {
                 alert('当日キャンセルは無いようにお願いいたします。');
                 liff.closeWindow();
