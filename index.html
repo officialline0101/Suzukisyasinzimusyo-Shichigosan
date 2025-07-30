@@ -17,7 +17,7 @@
             /* 画面中央に固定 */
             transform: translateY(-50%) translateX(13px);
             /* 中央配置と右ずらし */
-            background: #13ca5e;
+            background: #a8b9a7;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -104,7 +104,7 @@
         }
 
         h1 {
-            background: linear-gradient(135deg, #13ca5e, #0fa958);
+            background: linear-gradient(135deg, #a8b9a7, #667965);
             color: white;
             padding: 20px;
             border-radius: 0 15px 0px 45px;
@@ -124,7 +124,7 @@
     margin-bottom: 10px;
     padding: 3px;
     font-weight: 600;
-    background-color: #13ca5e;
+    background-color: #a8b9a7;
     color: white;
     border-radius: 6px;
     font-size: 18px;
@@ -141,7 +141,7 @@
             margin-bottom: 10px;
             padding: 3px;
             font-weight: 600;
-            background-color: #13ca5e;
+            background-color: #a8b9a7;
             color: white;
             border-radius: 6px;
             font-size: 18px;
@@ -163,12 +163,12 @@
             align-items: center;
             justify-content: center;
             background: white;
-            color: #13ca5e;
+            color: #a8b9a7;
             font-weight: bold;
             font-size: 0.9em;
             border-radius: 4px;
             padding: 2px 6px;
-            border: 2px solid #13ca5e;
+            border: 2px solid #a8b9a7;
         }
 
         input[type="text"],
@@ -310,7 +310,7 @@
         }
 
         .calendar td.selected {
-            background-color: #13ca5e;
+            background-color: #a8b9a7;
             color: #fff;
         }
 
@@ -530,7 +530,7 @@
 
         .highlight-background {
             cursor: pointer;
-            background-color: #13ca5e;
+            background-color: #a8b9a7;
             padding: 10px;
             border-radius: 6px;
             font-size: 18px;
@@ -593,7 +593,7 @@
 
         input:focus,
         textarea:focus {
-            border-color: #13ca5e;
+            border-color: #a8b9a7;
             outline: none;
             box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
         }
@@ -602,7 +602,7 @@
             padding: 12px;
             border: none;
             border-radius: 6px;
-            background-color: #13ca5e;
+            background-color: #a8b9a7;
             color: #000000;
             font-size: 16px;
             cursor: pointer;
@@ -618,11 +618,11 @@
             width: 100%;
             padding: 15px;
             font-size: 18px;
-            background-color: #dc3545;
+            background-color: #a8b9a7;
         }
 
         .submit-button:hover {
-            background-color: #c82333;
+            background-color: #a8b9a7;
         }
 
         @media (max-width: 768px) {
@@ -671,7 +671,7 @@
             left: 50%;
             transform: translate(-50%, -10px);
             /* Y方向に上げる */
-            background-color: #13ca5e;
+            background-color: #a8b9a7;
             color: #fff;
             padding: 3px 12px;
             /* ボックスのパディングを縮小 */
@@ -765,7 +765,7 @@
             /* 内側に3pxのスペースをつける（中身がくっつかないように） */
             font-weight: 600;
             /* 文字を少し太くする（600は太さの目安） */
-            background-color: #13ca5e;
+            background-color: #a8b9a7;
             /* 背景の色をくすんだ緑にする */
             color: white;
             /* 文字の色を白にする */
@@ -832,7 +832,7 @@
 
 /* フォーカス時の装飾 */
 #mugwortreservationtime:focus {
-    border-color: #00a683;
+    border-color: #a8b9a7;
     outline: none;
     background-color: #f9fefc;
 }
@@ -871,7 +871,7 @@
             margin-bottom: 10px;
             padding: 3px;
             font-weight: 600;
-            background-color: #13ca5e;
+            background-color: #a8b9a7;
             color: white;
             border-radius: 6px;
             font-size: 18px;
@@ -884,16 +884,9 @@
 </head>
 
 <body>
-    <!-- 右側の追従ナビ -->
-    <div class="side-nav" id="sideNav">
-        <a href="#section-message">
-            <span>⇩</span>
-            <i class="fas fa-comment"></i>
-        </a>
-    </div>
 
     <div class="container">
-        <h1>すずき写真事務所<br>七五三
+        <h1><span style="font-size: 18px;">すずき写真事務所</span><br>七五三
             <div class="info-text">こちらのフォームは"公式LINEから"でのみ<br>送ることができます。</div>
         </h1>
         <div class="label">お客様名<span class="required">必須</span></div>
@@ -905,59 +898,6 @@
         <div class="label">ご住所<span class="required">必須</span></div>
         <input type="text" id="Yourresidentialaddress" placeholder="ご住所を入力してください" oninput="saveInput('Yourresidentialaddress')">
 
-        <div class="label">プランをお選びください<span class="required">必須</span></div>
-        <div class="visit-buttons">
-            <button type="button" id="firstVisit" onclick="selectVisit(this)">お参り同行プラン 47000円+税</button>
-            <button type="button" id="repeatVisit" onclick="selectVisit(this)">スタジオ3歳男の子 53000円+税</button>
-            <button type="button" id="repeatVisit" onclick="selectVisit(this)">スタジオ3歳女の子 56000円+税</button>
-            <button type="button" id="repeatVisit" onclick="selectVisit(this)">スタジオ5歳男の子 55000円+税</button>
-            <button type="button" id="repeatVisit" onclick="selectVisit(this)">スタジオ7歳女の子 60000円+税</button>
-        </div>
-
-            <div class="labelnigyou">祈祷されるお子様お名前、年齢、性別<br>(複数の場合は全員分)を<br>ご記入ください。<span class="required">必須</span></div>
-            <textarea id="mugwortmainkid" placeholder="例：山田太郎・3歳・男の子など 複数いれば全員分ご記入ください。"></textarea>
-
-            <div class="labelnigyou">付き添いご兄弟の<br>お名前、年齢、性別を<br>ご記入ください（任意）</div>
-            <textarea id="mugwortsiblinginfo" placeholder="お名前・年齢・性別をご記入ください。"></textarea>
-
-            <div class="label">撮影に参加される方の人数と続柄（任意）</div>
-            <input type="text" id="mugwortparticipants" placeholder="例：祖母2人、父、母 など">
-
-            <div class="label">同行撮影の方はお参りされる神社名（任意）</div>
-            <input type="text" id="mugwortshrinename" placeholder="神社名をご記入ください">
-
-            <div class="label">ご祈祷の予約時間（任意）</div>
-            <input type="time" id="mugwortreservationtime">
-
-            <div class="labelnigyou">生花撮影ご希望の有無<br>（スタジオのみ）（任意）</div>
-            <div class="Freshflowerphotography-buttons">
-                <button type="button" onclick="selectFreshflowerphotography(this)">有り</button>
-                <button type="button" onclick="selectFreshflowerphotography(this)">無し</button>
-                <button type="button" onclick="selectFreshflowerphotography(this)">相談したい</button>
-            </div>
-
-            <div class="label">お支度風景撮影ご希望の有無<span class="required">必須</span></div>
-            <div class="preparationphoto-buttons">
-                <button type="button" onclick="selectpreparationphoto(this)">有り</button>
-                <button type="button" onclick="selectpreparationphoto(this)">無し</button>
-                <button type="button" onclick="selectpreparationphoto(this)">相談したい</button>
-            </div>
-
-            <div class="label">着物レンタル希望の有無<span class="required">必須</span></div>
-            <div class="kimono-buttons">
-                <button type="button" onclick="selectkimono(this)">有り</button>
-                <button type="button" onclick="selectkimono(this)">無し</button>
-                <button type="button" onclick="selectkimono(this)">相談したい</button>
-            </div>
-
-            <div class="label">お支度ご希望の有無<span class="required">必須</span></div>
-        <div class="info-text">ヘアメイクさんのスケジュール確認が必要になりますので、<br>追って希望日の空き状況をお知らせします</div>
-            <div class="hairmakeup-buttons">
-                <button type="button" onclick="selecthairmakeup(this)">有り</button>
-                <button type="button" onclick="selecthairmakeup(this)">無し</button>
-                <button type="button" onclick="selecthairmakeup(this)">相談したい</button>
-            </div>
-        
         <div class="highlight-background">
             <div class="kibounitizi">希望日時<span class="required">必須</span></div>
         </div>
@@ -965,17 +905,17 @@
         <!-- カスタム placeholder 表示用 -->
         <div class="datetime-wrapper" style="text-align: center;">
             <span class="placeholder" id="placeholder1">⇩タップして日時を入力⇩</span>
-            <input type="datetime-local" id="date1" class="datetime-input" placeholder=" " aria-label="タップして日時を入力">
+            <input type="date" id="date1" class="datetime-input" placeholder=" " aria-label="タップして日時を入力">
         </div>
 
         <div class="highlight-background">
-            <span class="kibounitizi">第2希望日※任意</span>
+            <span class="kibounitizi">第2希望日<span class="required">必須</span></span>
         </div>
 
         <!-- カスタム placeholder 表示用 -->
         <div class="datetime-wrapper" style="text-align: center;">
             <span class="placeholder" id="placeholder2">⇩タップして日時を入力⇩</span>
-            <input type="datetime-local" id="date2" class="datetime-input" placeholder=" " aria-label="タップして日時を入力">
+            <input type="date" id="date2" class="datetime-input" placeholder=" " aria-label="タップして日時を入力">
         </div>
 
         <div class="highlight-background">
@@ -985,18 +925,81 @@
         <!-- カスタム placeholder 表示用 -->
         <div class="datetime-wrapper" style="text-align: center;">
             <span class="placeholder" id="placeholder3">⇩タップして日時を入力⇩</span>
-            <input type="datetime-local" id="date3" class="datetime-input" placeholder=" " aria-label="タップして日時を入力">
+            <input type="date" id="date3" class="datetime-input" placeholder=" " aria-label="タップして日時を入力">
         </div>
+
+        <div class="label">プランをお選びください<span class="required">必須</span></div>
+        <div class="visit-buttons">
+            <button type="button" id="firstVisit" onclick="selectVisit(this)">お参り同行プラン 47000円+税</button>
+            <button type="button" id="repeatVisit" onclick="selectVisit(this)">スタジオ3歳男の子 53000円+税</button>
+            <button type="button" id="repeatVisit" onclick="selectVisit(this)">スタジオ3歳女の子 56000円+税</button>
+            <button type="button" id="repeatVisit" onclick="selectVisit(this)">スタジオ5歳男の子 55000円+税</button>
+            <button type="button" id="repeatVisit" onclick="selectVisit(this)">スタジオ7歳女の子 60000円+税</button>
+        </div>
+
+<div class="labelnigyou">
+  祈祷されるお子様のお名前・年齢・性別<br>
+  <span style="font-size: 14px;">(複数の場合は全員分)</span>
+  <span class="required">必須</span>
+</div>
+
+<textarea id="mugwortmainkid"></textarea>
+
+<script>
+  document.getElementById("mugwortmainkid").placeholder =
+    "例：山田花子・7歳・女の子\n山田太郎・5歳・男の子\n山田次郎・3歳・男の子";
+</script>
+
+            <div class="labelnigyou">付き添いご兄弟のお名前・年齢・性別</div>
+            <textarea id="mugwortsiblinginfo" placeholder="お名前・年齢・性別をご記入ください。"></textarea>
+
+            <div class="labelContent">撮影に参加される方の人数と続柄</div>
+            <input type="text" id="mugwortparticipants" placeholder="例：祖母2人、父、母 など">
+
+            <div class="labelContent">同行撮影の方はお参りされる神社名</div>
+            <input type="text" id="mugwortshrinename" placeholder="神社名をご記入ください">
+
+            <div class="labelContent">ご祈祷の予約時間</div>
+            <input type="time" id="mugwortreservationtime">
+
+            <div class="labelnigyou">生花撮影ご希望の有無<br><span style="font-size: 14px;">（スタジオのみ）</span></div>
+            <div class="Freshflowerphotography-buttons">
+                <button type="button" onclick="selectFreshflowerphotography(this)">有り</button>
+                <button type="button" onclick="selectFreshflowerphotography(this)">無し</button>
+                <button type="button" onclick="selectFreshflowerphotography(this)">検討中</button>
+            </div>
+
+            <div class="label">お支度風景撮影ご希望の有無<span class="required">必須</span><br><span style="font-size: 14px;">(オプション5500円)</span></div>
+            <div class="preparationphoto-buttons">
+                <button type="button" onclick="selectpreparationphoto(this)">有り</button>
+                <button type="button" onclick="selectpreparationphoto(this)">無し</button>
+                <button type="button" onclick="selectpreparationphoto(this)">検討中</button>
+            </div>
+
+            <div class="label">着物レンタル希望の有無<span class="required">必須</span></div>
+            <div class="kimono-buttons">
+                <button type="button" onclick="selectkimono(this)">有り</button>
+                <button type="button" onclick="selectkimono(this)">無し</button>
+                <button type="button" onclick="selectkimono(this)">検討中</button>
+            </div>
+
+            <div class="label">お支度ご希望の有無<span class="required">必須</span></div>
+        <div class="info-text">ヘアメイクさんのスケジュール確認が必要になりますので、<br>追って希望日の空き状況をお知らせします</div>
+            <div class="hairmakeup-buttons">
+                <button type="button" onclick="selecthairmakeup(this)">有り</button>
+                <button type="button" onclick="selecthairmakeup(this)">無し</button>
+                <button type="button" onclick="selecthairmakeup(this)">検討中</button>
+            </div>
 
 <div class="info-text">
   ※衣装、お支度の料金表はHPにリンクがございます。<br>
   大変恐縮ですが、交通費以外のお見積りにつきましては、<br>
   各自料金表をご参照くださいますようお願い申し上げます。<br>
   <a href="https://suzu-photo.com/wp-content/uploads/2025/04/%E6%96%99%E9%87%91%E8%A1%A82025.jpg" target="_blank" rel="noopener noreferrer">
-    ■お支度料金表
+    <br>＞＞お支度料金表＜＜
   </a><br><br>
   <a href="https://suzu-photo.com/wp-content/uploads/2025/04/%E4%B8%83%E4%BA%94%E4%B8%89%E3%83%BB%E7%94%A3%E7%9D%80%E3%83%BB%E8%A8%AA%E5%95%8F%E7%9D%80_%E6%96%99%E9%87%91%E8%A1%A8-scaled.jpg" target="_blank" rel="noopener noreferrer">
-    ■衣装レンタル料金表
+    ＞＞衣装レンタル料金表＜＜
   </a>
 </div>
 
@@ -1606,7 +1609,7 @@ function selectpreparationphoto(element) {
                 type: 'text',
                 text: `【予約フォーム】\n≪七五三≫\n\n｟お名前｠\n・${formData.name}\n\n｟ご住所｠\n・${formData.Yourresidentialaddress}\n\n｟電話番号｠\n・${formData.phone}\n\n｟プラン｠\n・${formData.visitCount}\n\n｟祈祷されるお子様｠\n・${formData.mugwortmainkid}\n\n｟付き添いご兄弟｠\n・${formData.mugwortsiblinginfo}\n\n｟撮影に参加される方｠\n・${formData.mugwortparticipants}\n\n｟同行撮影｠\n・${formData.mugwortshrinename}\n\n｟ご祈祷の予約時間｠\n・${formData.mugwortreservationtime}\n\n｟生花撮影｠\n・${formData.FreshflowerphotographyCount}\n\n｟お支度風景｠\n・${formData.preparationphotoCount}\n\n｟着物レンタル｠\n・${formData.kimonoCount}\n\n｟お支度ご希望｠\n・${formData.hairmakeupCount}\n\n【希望日時】：\n｟第一希望日｠\n${formatDate(formData.dates[0])}\n\n｟第二希望日｠\n${formatDate(formData.dates[1])}\n\n｟第三希望日｠\n${formatDate(formData.dates[2])}\n\n｟メッセージ｠${formData.message}`
             }]).then(() => {
-                alert('当日キャンセルは無いようにお願いいたします。');
+                alert('お問合せありがとうございます。追って担当者から返信をさせて頂きます。');
                 liff.closeWindow();
             }).catch((err) => {
                 console.error('メッセージの送信に失敗しました', err);
