@@ -118,21 +118,56 @@
             overflow: hidden;
         }
 
-.label {
-    display: block;
-    margin-top: 3px;         /* ← 追加 */
-    margin-bottom: 10px;
-    padding: 3px;
-    font-weight: 600;
-    background-color: #a8b9a7;
-    color: white;
-    border-radius: 6px;
-    font-size: 18px;
-    text-align: center;
-    text-indent: 40px;
-    position: relative;
-    overflow: hidden;
-}
+        .label {
+            display: block;
+            margin-top: 10px;
+            /* ← ここを変更 */
+            margin-bottom: 10px;
+            padding: 3px;
+            font-weight: 600;
+            background-color: #a8b9a7;
+            color: white;
+            border-radius: 6px;
+            font-size: 18px;
+            text-align: center;
+            text-indent: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .labelhidarizurasi {
+            display: block;
+            margin-top: 10px;
+            /* ← ここを変更 */
+            margin-bottom: 10px;
+            padding: 3px;
+            font-weight: 600;
+            background-color: #a8b9a7;
+            color: white;
+            border-radius: 6px;
+            font-size: 18px;
+            text-align: center;
+            text-indent: 0px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .labelkakikukeko {
+            display: block;
+            margin-top: 10px;
+            /* ← ここを変更 */
+            margin-bottom: 10px;
+            padding: 3px;
+            font-weight: 600;
+            background-color: #a8b9a7;
+            color: white;
+            border-radius: 6px;
+            font-size: 18px;
+            text-align: center;
+            text-indent: 40px;
+            position: relative;
+            overflow: hidden;
+        }
 
         .labelContent {
             display: block;
@@ -176,7 +211,7 @@
         textarea {
             width: 100%;
             padding: 12px;
-            margin-bottom: 20px;
+            margin-bottom: 3px;
             border: 1px solid #ccc;
             border-radius: 6px;
             box-sizing: border-box;
@@ -618,6 +653,8 @@
             width: 100%;
             padding: 15px;
             font-size: 18px;
+            font-weight: bold;
+            /* ← これを追加 */
             background-color: #a8b9a7;
         }
 
@@ -816,53 +853,58 @@
             background-color: #ff4f4f;
         }
 
-/* time入力欄 */
-#mugwortreservationtime {
-    width: 100%;             /* スマホ画面いっぱいに広げる */
-    padding: 1em;            /* タップしやすく内側余白を増やす */
-    font-size: 1rem;         /* 入力しやすい文字サイズ */
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    background-color: #fff;
-    box-sizing: border-box;
-    appearance: none;        /* iOS Safariで余計なスタイルを消す */
-    -webkit-appearance: none;
-    transition: border-color 0.3s;
-}
+        /* time入力欄 */
+        #mugwortreservationtime {
+            width: 100%;
+            /* スマホ画面いっぱいに広げる */
+            padding: 1em;
+            /* タップしやすく内側余白を増やす */
+            font-size: 1rem;
+            /* 入力しやすい文字サイズ */
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #fff;
+            box-sizing: border-box;
+            appearance: none;
+            /* iOS Safariで余計なスタイルを消す */
+            -webkit-appearance: none;
+            transition: border-color 0.3s;
+        }
 
-/* フォーカス時の装飾 */
-#mugwortreservationtime:focus {
-    border-color: #a8b9a7;
-    outline: none;
-    background-color: #f9fefc;
-}
+        /* フォーカス時の装飾 */
+        #mugwortreservationtime:focus {
+            border-color: #a8b9a7;
+            outline: none;
+            background-color: #f9fefc;
+        }
 
-.info-textmemo { 
-    margin-top: 20px;
-    margin-bottom: 10px;
-    font-size: 13px;
-    color: #000000;
-    line-height: 1.5;
-    text-align: center;
-    word-wrap: break-word;
-    background-color: #eef9f5;
-    padding: 10px;
-    border-radius: 4px;
+        .info-textmemo {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 13px;
+            color: #000000;
+            line-height: 1.5;
+            text-align: center;
+            word-wrap: break-word;
+            background-color: #eef9f5;
+            padding: 10px;
+            border-radius: 4px;
 
-    /* 横一杯に広げるための追加 */
-    width: 100%;
-    box-sizing: border-box; /* padding含めて100%に収まるように */
-    display: block;
-}
+            /* 横一杯に広げるための追加 */
+            width: 100%;
+            box-sizing: border-box;
+            /* padding含めて100%に収まるように */
+            display: block;
+        }
 
-/* 携帯端末向けのレスポンシブデザイン */
-@media (max-width: 768px) {
-    .info-textmemo {
-        font-size: 11.5px;
-        margin-top: 10px;
-        line-height: 2.0;
-    }
-}
+        /* 携帯端末向けのレスポンシブデザイン */
+        @media (max-width: 768px) {
+            .info-textmemo {
+                font-size: 11.5px;
+                margin-top: 10px;
+                line-height: 2.0;
+            }
+        }
 
         .labelnigyou {
             display: block;
@@ -889,18 +931,17 @@
         <h1><span style="font-size: 18px;">すずき写真事務所</span><br>七五三
             <div class="info-text">こちらのフォームは携帯専用です。<br>パソコンからは送信できません</div>
         </h1>
-        <div class="label">お客様名<span class="required">必須</span></div>
+        <div class="labelkakikukeko">お客様名<span class="required">必須</span></div>
         <input type="text" id="name" placeholder="お名前を入力してください" oninput="saveInput('name')">
 
-        <div class="label">ご住所<span class="required">必須</span></div>
-        <input type="text" id="Yourresidentialaddress" placeholder="ご住所を入力してください" oninput="saveInput('Yourresidentialaddress')">
+        <div class="labelkakikukeko">ご住所<span class="required">必須</span></div>
+        <input type="text" id="Yourresidentialaddress" placeholder="ご住所を入力してください"
+            oninput="saveInput('Yourresidentialaddress')">
 
-        <div class="label">電話番号<span class="required">必須</span></div>
+        <div class="labelkakikukeko">電話番号<span class="required">必須</span></div>
         <input type="tel" id="phone" placeholder="電話番号を入力してください" oninput="saveInput('phone')">
 
-        <div class="highlight-background">
-            <div class="kibounitizi">希望日時<span class="required">必須</span></div>
-        </div>
+        <div class="label">希望日時<span class="required">必須</span></div>
 
         <!-- カスタム placeholder 表示用 -->
         <div class="datetime-wrapper" style="text-align: center;">
@@ -908,9 +949,7 @@
             <input type="date" id="date1" class="datetime-input" placeholder=" " aria-label="タップして日時を入力">
         </div>
 
-        <div class="highlight-background">
-            <span class="kibounitizi">第2希望日<span class="required">必須</span></span>
-        </div>
+        <div class="label">第2希望日<span class="required">必須</span></div>
 
         <!-- カスタム placeholder 表示用 -->
         <div class="datetime-wrapper" style="text-align: center;">
@@ -918,9 +957,7 @@
             <input type="date" id="date2" class="datetime-input" placeholder=" " aria-label="タップして日時を入力">
         </div>
 
-        <div class="highlight-background">
-            <span class="kibounitizi">第3希望日※任意</span>
-        </div>
+        <div class="labelhidarizurasi">第3希望日</div>
 
         <!-- カスタム placeholder 表示用 -->
         <div class="datetime-wrapper" style="text-align: center;">
@@ -937,73 +974,76 @@
             <button type="button" id="repeatVisit" onclick="selectVisit(this)">スタジオ7歳女の子 60000円+税</button>
         </div>
 
-<div class="labelnigyou">
-  祈祷されるお子様のお名前・年齢・性別<br>
-  <span style="font-size: 14px;">(複数の場合は全員分)</span>
-  <span class="required">必須</span>
-</div>
+        <div class="labelhidarizurasi">
+            祈祷されるお子様のお名前・年齢・性別<br>
+            <span style="font-size: 14px;">(複数の場合は全員分)</span>
+            <span class="required">必須</span>
+        </div>
 
-<textarea id="mugwortmainkid"></textarea>
+        <textarea id="mugwortmainkid"></textarea>
 
-<script>
-  document.getElementById("mugwortmainkid").placeholder =
-    "例：山田花子・7歳・女の子\n山田太郎・5歳・男の子\n山田次郎・3歳・男の子";
-</script>
+        <script>
+            document.getElementById("mugwortmainkid").placeholder =
+                "例：山田花子・7歳・女の子\n山田太郎・5歳・男の子\n山田次郎・3歳・男の子";
+        </script>
 
-            <div class="labelnigyou">付き添いご兄弟のお名前・年齢・性別</div>
-            <textarea id="mugwortsiblinginfo" placeholder="お名前・年齢・性別をご記入ください。"></textarea>
+        <div class="labelhidarizurasi">付き添いご兄弟のお名前・年齢・性別</div>
+        <textarea id="mugwortsiblinginfo" placeholder="お名前・年齢・性別をご記入ください。"></textarea>
 
-            <div class="labelContent">撮影に参加される方の人数と続柄</div>
-            <input type="text" id="mugwortparticipants" placeholder="例：祖母2人、父、母 など">
+        <div class="labelhidarizurasi">撮影に参加される方の人数と続柄</div>
+        <input type="text" id="mugwortparticipants" placeholder="例：祖母2人、父、母 など">
 
-            <div class="labelContent">同行撮影の方はお参りされる神社名</div>
-            <input type="text" id="mugwortshrinename" placeholder="神社名をご記入ください">
+        <div class="labelhidarizurasi">同行撮影の方はお参りされる神社名</div>
+        <input type="text" id="mugwortshrinename" placeholder="神社名をご記入ください">
 
-            <div class="labelContent">ご祈祷の予約時間</div>
-            <input type="time" id="mugwortreservationtime">
+        <div class="labelhidarizurasi">ご祈祷の予約時間</div>
+        <input type="time" id="mugwortreservationtime">
 
-            <div class="labelnigyou">生花撮影ご希望の有無<br><span style="font-size: 14px;">（スタジオのみ）</span></div>
-            <div class="Freshflowerphotography-buttons">
-                <button type="button" onclick="selectFreshflowerphotography(this)">有り</button>
-                <button type="button" onclick="selectFreshflowerphotography(this)">無し</button>
-                <button type="button" onclick="selectFreshflowerphotography(this)">検討中</button>
-            </div>
+        <div class="labelnigyou">生花撮影ご希望の有無<br><span style="font-size: 14px;">（スタジオのみ）</span></div>
+        <div class="Freshflowerphotography-buttons">
+            <button type="button" onclick="selectFreshflowerphotography(this)">有り</button>
+            <button type="button" onclick="selectFreshflowerphotography(this)">無し</button>
+            <button type="button" onclick="selectFreshflowerphotography(this)">検討中</button>
+        </div>
 
-            <div class="label">お支度風景撮影ご希望の有無<span class="required">必須</span><br><span style="font-size: 14px;">(オプション5500円)</span></div>
-            <div class="preparationphoto-buttons">
-                <button type="button" onclick="selectpreparationphoto(this)">有り</button>
-                <button type="button" onclick="selectpreparationphoto(this)">無し</button>
-                <button type="button" onclick="selectpreparationphoto(this)">検討中</button>
-            </div>
+        <div class="label">お支度風景撮影ご希望の有無<span class="required">必須</span><br><span
+                style="font-size: 14px;">(オプション5500円)</span></div>
+        <div class="preparationphoto-buttons">
+            <button type="button" onclick="selectpreparationphoto(this)">有り</button>
+            <button type="button" onclick="selectpreparationphoto(this)">無し</button>
+            <button type="button" onclick="selectpreparationphoto(this)">検討中</button>
+        </div>
 
-            <div class="label">着物レンタル希望の有無<span class="required">必須</span></div>
-            <div class="kimono-buttons">
-                <button type="button" onclick="selectkimono(this)">有り</button>
-                <button type="button" onclick="selectkimono(this)">無し</button>
-                <button type="button" onclick="selectkimono(this)">検討中</button>
-            </div>
+        <div class="label">着物レンタル希望の有無<span class="required">必須</span></div>
+        <div class="kimono-buttons">
+            <button type="button" onclick="selectkimono(this)">有り</button>
+            <button type="button" onclick="selectkimono(this)">無し</button>
+            <button type="button" onclick="selectkimono(this)">検討中</button>
+        </div>
 
-            <div class="label">お支度ご希望の有無<span class="required">必須</span></div>
+        <div class="label">お支度ご希望の有無<span class="required">必須</span></div>
         <div class="info-text">ヘアメイクさんのスケジュール確認が必要になりますので、<br>追って希望日の空き状況をお知らせします</div>
-            <div class="hairmakeup-buttons">
-                <button type="button" onclick="selecthairmakeup(this)">有り</button>
-                <button type="button" onclick="selecthairmakeup(this)">無し</button>
-                <button type="button" onclick="selecthairmakeup(this)">検討中</button>
-            </div>
+        <div class="hairmakeup-buttons">
+            <button type="button" onclick="selecthairmakeup(this)">有り</button>
+            <button type="button" onclick="selecthairmakeup(this)">無し</button>
+            <button type="button" onclick="selecthairmakeup(this)">検討中</button>
+        </div>
 
-<div class="info-text">
-  ※衣装、お支度の料金表は下記リンクをご確認ください。<br>
-  大変恐縮ですが、交通費以外のお見積りにつきましては、<br>
-  各自料金表をご参照くださいますようお願い申し上げます。<br>
-  <a href="https://suzu-photo.com/wp-content/uploads/2025/04/%E6%96%99%E9%87%91%E8%A1%A82025.jpg" target="_blank" rel="noopener noreferrer">
-    <br>＞＞お支度料金表＜＜
-  </a><br><br>
-  <a href="https://suzu-photo.com/wp-content/uploads/2025/04/%E4%B8%83%E4%BA%94%E4%B8%89%E3%83%BB%E7%94%A3%E7%9D%80%E3%83%BB%E8%A8%AA%E5%95%8F%E7%9D%80_%E6%96%99%E9%87%91%E8%A1%A8-scaled.jpg" target="_blank" rel="noopener noreferrer">
-    ＞＞衣装レンタル料金表＜＜
-  </a>
-</div>
+        <div class="info-text">
+            ※衣装、お支度の料金表は下記リンクをご確認ください。<br>
+            大変恐縮ですが、交通費以外のお見積りにつきましては、<br>
+            各自料金表をご参照くださいますようお願い申し上げます。<br>
+            <a href="https://suzu-photo.com/wp-content/uploads/2025/04/%E6%96%99%E9%87%91%E8%A1%A82025.jpg"
+                target="_blank" rel="noopener noreferrer">
+                <br>＞＞お支度料金表＜＜
+            </a><br><br>
+            <a href="https://suzu-photo.com/wp-content/uploads/2025/04/%E4%B8%83%E4%BA%94%E4%B8%89%E3%83%BB%E7%94%A3%E7%9D%80%E3%83%BB%E8%A8%AA%E5%95%8F%E7%9D%80_%E6%96%99%E9%87%91%E8%A1%A8-scaled.jpg"
+                target="_blank" rel="noopener noreferrer">
+                ＞＞衣装レンタル料金表＜＜
+            </a>
+        </div>
 
-        <div class="labelContent">ご質問/ご相談<br>（質問等お気軽にご記入ください）</div>
+        <div class="labelhidarizurasi">ご質問/ご相談</div>
         <textarea id="message" rows="4" placeholder="メッセージを入力してください"></textarea>
 
         <button class="submit-button" onclick="submitForm()" div id="section-message">送信</button>
@@ -1401,80 +1441,80 @@
             updateDisplayInfo(); // 表示を更新
         }
 
-// 訪問回数の選択（初回・リピート）
-function selectVisit(element) {
-    document.querySelectorAll('.visit-buttons button').forEach(btn => btn.classList.remove('active'));
-    element.classList.add('active');
-    visitCount = element.innerText;
+        // 訪問回数の選択（初回・リピート）
+        function selectVisit(element) {
+            document.querySelectorAll('.visit-buttons button').forEach(btn => btn.classList.remove('active'));
+            element.classList.add('active');
+            visitCount = element.innerText;
 
-    // 選択された訪問回数に対応する時間を取得
-    selectedVisitTime = visitTimes[visitCount];
+            // 選択された訪問回数に対応する時間を取得
+            selectedVisitTime = visitTimes[visitCount];
 
-    console.log('選択された訪問回数の時間:', selectedVisitTime);
+            console.log('選択された訪問回数の時間:', selectedVisitTime);
 
-    // カレンダーを更新するために取得する日付を渡す
-    fetchAvailability(currentDate);
-}
+            // カレンダーを更新するために取得する日付を渡す
+            fetchAvailability(currentDate);
+        }
 
-// 訪問回数の選択（初回・リピート）
-function selectFreshflowerphotography(element) {
-    document.querySelectorAll('.Freshflowerphotography-buttons button').forEach(btn => btn.classList.remove('active'));
-    element.classList.add('active');
-    FreshflowerphotographyCount = element.innerText;
+        // 訪問回数の選択（初回・リピート）
+        function selectFreshflowerphotography(element) {
+            document.querySelectorAll('.Freshflowerphotography-buttons button').forEach(btn => btn.classList.remove('active'));
+            element.classList.add('active');
+            FreshflowerphotographyCount = element.innerText;
 
-    // 選択された訪問回数に対応する時間を取得
-    selectedFreshflowerphotographyTime = FreshflowerphotographyTimes[FreshflowerphotographyCount];
+            // 選択された訪問回数に対応する時間を取得
+            selectedFreshflowerphotographyTime = FreshflowerphotographyTimes[FreshflowerphotographyCount];
 
-    console.log('選択された訪問回数の時間:', selectedFreshflowerphotographyTime);
+            console.log('選択された訪問回数の時間:', selectedFreshflowerphotographyTime);
 
-    // カレンダーを更新するために取得する日付を渡す
-    fetchAvailability(currentDate);
-}
+            // カレンダーを更新するために取得する日付を渡す
+            fetchAvailability(currentDate);
+        }
 
-// 訪問回数の選択（初回・リピート）
-function selecthairmakeup(element) {
-    document.querySelectorAll('.hairmakeup-buttons button').forEach(btn => btn.classList.remove('active'));
-    element.classList.add('active');
-    hairmakeupCount = element.innerText;
+        // 訪問回数の選択（初回・リピート）
+        function selecthairmakeup(element) {
+            document.querySelectorAll('.hairmakeup-buttons button').forEach(btn => btn.classList.remove('active'));
+            element.classList.add('active');
+            hairmakeupCount = element.innerText;
 
-    // 選択された訪問回数に対応する時間を取得
-    selectedhairmakeupTime = hairmakeupTimes[hairmakeupCount];
+            // 選択された訪問回数に対応する時間を取得
+            selectedhairmakeupTime = hairmakeupTimes[hairmakeupCount];
 
-    console.log('選択された訪問回数の時間:', selectedhairmakeupTime);
+            console.log('選択された訪問回数の時間:', selectedhairmakeupTime);
 
-    // カレンダーを更新するために取得する日付を渡す
-    fetchAvailability(currentDate);
-}
+            // カレンダーを更新するために取得する日付を渡す
+            fetchAvailability(currentDate);
+        }
 
-// 訪問回数の選択（初回・リピート）
-function selectkimono(element) {
-    document.querySelectorAll('.kimono-buttons button').forEach(btn => btn.classList.remove('active'));
-    element.classList.add('active');
-    kimonoCount = element.innerText;
+        // 訪問回数の選択（初回・リピート）
+        function selectkimono(element) {
+            document.querySelectorAll('.kimono-buttons button').forEach(btn => btn.classList.remove('active'));
+            element.classList.add('active');
+            kimonoCount = element.innerText;
 
-    // 選択された訪問回数に対応する時間を取得
-    selectedkimonoTime = kimonoTimes[kimonoCount];
+            // 選択された訪問回数に対応する時間を取得
+            selectedkimonoTime = kimonoTimes[kimonoCount];
 
-    console.log('選択された訪問回数の時間:', selectedkimonoTime);
+            console.log('選択された訪問回数の時間:', selectedkimonoTime);
 
-    // カレンダーを更新するために取得する日付を渡す
-    fetchAvailability(currentDate);
-}
+            // カレンダーを更新するために取得する日付を渡す
+            fetchAvailability(currentDate);
+        }
 
-// 訪問回数の選択（初回・リピート）
-function selectpreparationphoto(element) {
-    document.querySelectorAll('.preparationphoto-buttons button').forEach(btn => btn.classList.remove('active'));
-    element.classList.add('active');
-    preparationphotoCount = element.innerText;
+        // 訪問回数の選択（初回・リピート）
+        function selectpreparationphoto(element) {
+            document.querySelectorAll('.preparationphoto-buttons button').forEach(btn => btn.classList.remove('active'));
+            element.classList.add('active');
+            preparationphotoCount = element.innerText;
 
-    // 選択された訪問回数に対応する時間を取得
-    selectedpreparationphotoTime = preparationphotoTimes[preparationphotoCount];
+            // 選択された訪問回数に対応する時間を取得
+            selectedpreparationphotoTime = preparationphotoTimes[preparationphotoCount];
 
-    console.log('選択された訪問回数の時間:', selectedpreparationphotoTime);
+            console.log('選択された訪問回数の時間:', selectedpreparationphotoTime);
 
-    // カレンダーを更新するために取得する日付を渡す
-    fetchAvailability(currentDate);
-}
+            // カレンダーを更新するために取得する日付を渡す
+            fetchAvailability(currentDate);
+        }
 
         function selecthighschool(element) {
             // 選択された日時をリセット
@@ -1566,22 +1606,22 @@ function selectpreparationphoto(element) {
 
         function submitForm() {
             const formData = {
-        name: document.getElementById('name').value.trim(),
-        phone: document.getElementById('phone').value.trim(),
-        mugwortmainkid: document.getElementById('mugwortmainkid').value.trim(),
-        mugwortsiblinginfo: document.getElementById('mugwortsiblinginfo').value.trim(),
-        Yourresidentialaddress: document.getElementById('Yourresidentialaddress').value.trim(),
-        mugwortparticipants: document.getElementById('mugwortparticipants').value.trim(),
-        mugwortshrinename: document.getElementById('mugwortshrinename').value.trim(),
-        mugwortreservationtime: document.getElementById('mugwortreservationtime').value.trim(),
-        visitCount, hairmakeupCount, kimonoCount, preparationphotoCount, FreshflowerphotographyCount,
+                name: document.getElementById('name').value.trim(),
+                phone: document.getElementById('phone').value.trim(),
+                mugwortmainkid: document.getElementById('mugwortmainkid').value.trim(),
+                mugwortsiblinginfo: document.getElementById('mugwortsiblinginfo').value.trim(),
+                Yourresidentialaddress: document.getElementById('Yourresidentialaddress').value.trim(),
+                mugwortparticipants: document.getElementById('mugwortparticipants').value.trim(),
+                mugwortshrinename: document.getElementById('mugwortshrinename').value.trim(),
+                mugwortreservationtime: document.getElementById('mugwortreservationtime').value.trim(),
+                visitCount, hairmakeupCount, kimonoCount, preparationphotoCount, FreshflowerphotographyCount,
                 dates: [
                     document.getElementById('date1').value,
                     document.getElementById('date2').value,
                     document.getElementById('date3').value
                 ],
-        message: document.getElementById('message').value.trim()
-      };
+                message: document.getElementById('message').value.trim()
+            };
 
             // フォームデータのチェック
             if (!formData.name) {
