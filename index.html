@@ -950,6 +950,37 @@
             position: relative;
             overflow: hidden;
         }
+
+.info-textokosan {
+    position: relative;
+    top: -20px; /* ← 上にずらす（必要に応じて調整） */
+    margin-top: 0;
+    margin-bottom: 0px;
+    font-size: 13px;
+    color: #000000;
+    line-height: 1.5;
+    text-align: center;
+    word-wrap: break-word;
+    background-color: #ffffff;
+    padding: 8px; /* 少し余白をつけると見やすい */
+    border-radius: 0 0 4px 4px;
+    border: 1px solid rgb(206, 206, 206);
+    border-top: none;
+
+    width: 100%;          /* 横いっぱい */
+    display: block;       /* ブロック要素として扱う */
+    box-sizing: border-box; /* borderやpaddingを含めて幅100% */
+}
+
+/* スマホ対応 */
+@media (max-width: 768px) {
+    .info-textokosan {
+        font-size: 8.5px;
+        top: -5px; /* モバイルでは少し控えめ */
+        line-height: 2.0;
+    }
+}
+
     </style>
 </head>
 
@@ -1001,7 +1032,7 @@
             <button type="button" id="repeatVisit" onclick="selectVisit(this)">スタジオ5歳男の子 55000円+税</button>
             <button type="button" id="repeatVisit" onclick="selectVisit(this)">スタジオ7歳女の子 60000円+税</button>
             <button type="button" id="repeatVisit" onclick="selectVisit(this)">スタジオきょうだい同時撮影</button>
-            <span class="info-textmenu" id="placeholder3">上のお子さんのプラン＋きょうだい1人につき5500円</span>
+            <span class="info-textokosan" id="placeholder3">上のお子さんのプラン＋きょうだい1人につき5500円</span>
         </div>
 
         <div class="labelhidarizurasi">
